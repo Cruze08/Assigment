@@ -5,6 +5,14 @@ app_description = "Assignment"
 app_email = "ankit@simpel.ai"
 app_license = "mit"
 
+
+doc_events = {
+    "Purchase Order": {
+        "validate": "assignment.custom_scripts.purchase_order.calculate_custom_g_total",
+        "before_save": "assignment.custom_scripts.purchase_order.distribute_freight_cost",
+    }
+}
+
 # Apps
 # ------------------
 
